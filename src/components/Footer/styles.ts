@@ -27,6 +27,10 @@ export const NavLink = styled(Link)`
   &:focus {
     color: #15418e;
   }
+
+  @media screen and (max-width: 769px) {
+    display: none;
+  }
 `;
 
 export const Extra = styled("section")`
@@ -107,11 +111,7 @@ export const FooterContainer = styled("div")`
   }
 
   @media screen and (max-width: 769px) {
-    width: auto;
-
-    a:not(:last-child) {
-      display: none;
-    }
+    width: 100%;
   }
 
   div {

@@ -1,24 +1,26 @@
-import { Row, Col } from "antd";
+import { Row, 
+  // Col,
+ } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 
-import i18n from "i18next";
+// import i18n from "i18next";
 import {
-  FooterSection,
-  Title,
+  // FooterSection,
+  // Title,
   NavLink,
   Extra,
   LogoContainer,
-  Para,
-  Large,
-  Chat,
-  Empty,
+  // Para,
+  // Large,
+  // Chat,
+  // Empty,
   FooterContainer,
-  Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
+  // Language,
+  // Label,
+  // LanguageSwitch,
+  // LanguageSwitchContainer,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -27,9 +29,9 @@ interface SocialLinkProps {
 }
 
 const Footer = ({ t }: any) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+  // const handleChange = (language: string) => {
+  //   i18n.changeLanguage(language);
+  // };
 
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
@@ -47,7 +49,7 @@ const Footer = ({ t }: any) => {
 
   return (
     <>
-      <FooterSection>
+      {/* <FooterSection>
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
@@ -105,14 +107,6 @@ const Footer = ({ t }: any) => {
             <Col lg={6} md={6} sm={12} xs={12}>
               <Label htmlFor="select-lang">{t("Language")}</Label>
               <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
-                  <SvgIcon
-                    src="united-states.svg"
-                    aria-label="homepage"
-                    width="30px"
-                    height="30px"
-                  />
-                </LanguageSwitch>
                 <LanguageSwitch onClick={() => handleChange("es")}>
                   <SvgIcon
                     src="spain.svg"
@@ -125,7 +119,7 @@ const Footer = ({ t }: any) => {
             </Col>
           </Row>
         </Container>
-      </FooterSection>
+      </FooterSection> */}
       <Extra>
         <Container border={true}>
           <Row
@@ -145,27 +139,25 @@ const Footer = ({ t }: any) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
+                href="https://www.instagram.com/cordobeces"
+                src="instagram.svg"
               />
               <SocialLink
-                href="https://twitter.com/Adrinlolx"
+                href="https://www.instagram.com/festivalcordobeces/"
+                src="ferris-wheel.svg"
+              />
+              <SocialLink
+                href="https://www.youtube.com/@cordobeces."
+                src="youtube.svg"
+              />
+              <SocialLink
+                href="https://twitter.com/Cordobecesok"
                 src="twitter.svg"
               />
               <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
+                href="https://www.threads.net/@cordobeces"
+                src="threads.svg"
               />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
-                src="medium.svg"
-              />
-              <a href="https://www.buymeacoffee.com/adrinlol">
-                <img
-                  src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=adrinlol&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
-                  alt="Buy me a pizza"
-                />
-              </a>
             </FooterContainer>
           </Row>
         </Container>

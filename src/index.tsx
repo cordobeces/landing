@@ -1,5 +1,6 @@
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { I18nextProvider } from "react-i18next";
 import "antd/dist/antd.css";
 
@@ -14,4 +15,10 @@ const App = () => (
   </BrowserRouter>
 );
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+

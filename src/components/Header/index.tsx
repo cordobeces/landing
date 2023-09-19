@@ -27,6 +27,10 @@ const Header = ({ t }: any) => {
     setVisibility(!visible);
   };
 
+  const onClick = () => {
+    window.open("https://wa.me/5493512264428", '_blank', 'noopener,noreferrer');
+  } 
+
   const MenuItem = () => {
     const scrollTo = (id: string) => {
       const element = document.getElementById(id) as HTMLDivElement;
@@ -37,21 +41,21 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
+        {/* <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+          <Span>{t("Festival")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
           <Span>{t("Mission")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+        </CustomNavLinkSmall> */}
+        {/* <CustomNavLinkSmall onClick={() => scrollTo("product")}>
           <Span>{t("Product")}</Span>
-        </CustomNavLinkSmall>
+        </CustomNavLinkSmall> */}
         <CustomNavLinkSmall
           style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
+          onClick={() => scrollTo("middle")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button>{t("Mandanos tu video")}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -72,11 +76,11 @@ const Header = ({ t }: any) => {
             <Outline />
           </Burger>
         </Row>
-        <Drawer closable={false} visible={visible} onClose={onClose}>
+        <Drawer closable={false} open={visible} onClose={onClose}>
           <Col style={{ marginBottom: "2.5rem" }}>
             <Label onClick={onClose}>
               <Col span={12}>
-                <Menu>Menu</Menu>
+                <Menu>Menú</Menu>
               </Col>
               <Col span={12}>
                 <Outline />

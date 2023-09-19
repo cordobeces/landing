@@ -10,6 +10,7 @@ export const LeftContentSection = styled("section")`
 `;
 
 export const Content = styled("p")`
+  text-align: center;
   margin: 1.5rem 0 2rem 0;
 `;
 
